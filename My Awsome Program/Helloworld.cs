@@ -6,22 +6,21 @@ namespace Avgof3numbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome! Tickets are 5$. Please insert cash.");
-            int cash = Convert.ToInt32(Console.ReadLine());
-            if (cash < 5)
-            {
-                Console.WriteLine("That's not enough money.");
-            }
-            else if (cash == 5)
-            {
-                Console.WriteLine("Here's your Ticket.");
-            }
-            else 
-            {
-                int change = cash - 5;
-                Console.WriteLine("Here is your ticket and " + change + " dollars in change.");
-            }
+            int age;
+            int height;
 
+            Console.WriteLine("Please input the age: ");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please input height in (cms): ");
+            height = Convert.ToInt32(Console.ReadLine());
+
+            if(age >= 18 && height >= 160) {
+                Console.WriteLine("Now you can enter!");
+            }else {
+                Console.WriteLine("You don't meet requirements.");
+            }
+            
             Console.ReadKey();
         }
     }
