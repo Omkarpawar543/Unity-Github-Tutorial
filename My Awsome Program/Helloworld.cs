@@ -6,36 +6,14 @@ namespace Avgof3numbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input a number between 1 and 5:");
+            Console.Write("How many cool numbers you want:");
 
-            int num = Convert.ToInt32(Console.ReadLine());
+            int count = Convert.ToInt32(Console.ReadLine());
 
-            switch (num)
+            for (int i = 1; i <= count; i++)
             {
-                case 1: 
-                Console.WriteLine("One");
-                break;
-
-                case 2: 
-                Console.WriteLine("Two");
-                break;
-                
-                case 3: 
-                Console.WriteLine("Three");
-                break;
-
-                case 4: 
-                Console.WriteLine("Four");
-                break;
-
-                case 5: 
-                Console.WriteLine("Five");
-                break;
-                
-                default: 
-                Console.WriteLine("Default");
-                break;
-                
+                double result = Math.Pow(2,i);
+                Console.WriteLine(result);
             }
             
             Console.ReadKey();
