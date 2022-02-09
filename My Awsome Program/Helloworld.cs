@@ -6,45 +6,38 @@ namespace Avgof3numbers
     {
         static void Main(string[] args)
         {
-            int a;
-            int b;
-            int c;
+            Console.WriteLine("Input a number between 1 and 5:");
 
-            Console.WriteLine("18+4-1=");
-            a = Convert.ToInt32(Console.ReadLine());
+            int num = Convert.ToInt32(Console.ReadLine());
 
-            if(a == 21) 
+            switch (num)
             {
-                Console.WriteLine("Correct!");
-            }
-            else 
-            {
-                System.Environment.Exit(0); 
+                case 1: 
+                Console.WriteLine("One");
+                break;
+
+                case 2: 
+                Console.WriteLine("Two");
+                break;
+                
+                case 3: 
+                Console.WriteLine("Three");
+                break;
+
+                case 4: 
+                Console.WriteLine("Four");
+                break;
+
+                case 5: 
+                Console.WriteLine("Five");
+                break;
+                
+                default: 
+                Console.WriteLine("Default");
+                break;
+                
             }
             
-            Console.WriteLine("15*5=");
-            b = Convert.ToInt32(Console.ReadLine());
-
-            if(b == 75) 
-            {
-                Console.WriteLine("Correct!");
-            }
-            else 
-            {
-                Console.WriteLine("Wrong!");
-            }
-
-            Console.WriteLine("18/2 + 12=");
-            c = Convert.ToInt32(Console.ReadLine());
-
-            if(c == 21) 
-            {
-                Console.WriteLine("Correct!");
-            }
-            else 
-            {
-                Console.WriteLine("Wrong!");
-            }
             Console.ReadKey();
         }
     }
