@@ -1,22 +1,61 @@
 using System;
 
-namespace Avgof3numbers
+
+
+namespace MyAwesomeMathQuiz
+
 {
-    class Program1
+
+    class Program
+
     {
+
         static void Main(string[] args)
+
         {
-            Console.Write("How many cool numbers you want:");
 
-            int count = Convert.ToInt32(Console.ReadLine());
+            Random numberGen = new Random();
 
-            for (int i = 1; i <= count; i++)
-            {
-                double result = Math.Pow(2,i);
-                Console.WriteLine(result);
+
+
+            int roll1 = 0;
+
+            int roll2 = 1;
+
+            int attempts = 0;
+
+
+
+            Console.WriteLine("Press any key to roll both dices.");
+
+
+
+            while(roll1 != roll2) {
+
+                Console.ReadKey();
+
+
+
+                roll1 = numberGen.Next(1, 7);
+
+                roll2 = numberGen.Next(1, 7);
+
+                Console.WriteLine("You rolled : " + roll1 + " and " + roll2);
+
+                attempts++;
+
             }
-            
-            Console.ReadKey();
+
+
+
+            Console.WriteLine("It took u " + attempts + (" attempts to roll same numbers!"));
+
+
+
+           Console.ReadKey();
+
         }
+
     }
+
 }
